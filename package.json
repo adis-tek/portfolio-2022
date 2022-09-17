@@ -1,24 +1,21 @@
 {
   "name": "r3f-next-starter",
   "version": "1.0.0",
-  "authors": [
-    "Ryosuke Hana <https://twitter.com/whoisryosuke>",
-    "Renaud ROHLINGER <https://twitter.com/onirenaud>"
-  ],
-  "license": "MIT",
   "private": true,
   "engines": {
     "node": ">=14"
   },
   "scripts": {
-    "lint": "yarn prettier && yarn eslint",
-    "eslint": "next lint --fix --dir src",
-    "prettier": "prettier -l \"./src/**/*.{js,jsx,ts,tsx,md}\" --write",
     "dev": "next dev",
     "build": "next build",
-    "export": "EXPORT=true next build && EXPORT=true next export",
-    "analyze": "ANALYZE=true next build",
-    "start": "next start"
+    "start": "next start",
+    "lint": "next lint",
+    "prepare": "husky install",
+    "check-types": "tsc --pretty --noEmit",
+    "check-format": "prettier --check .",
+    "check-lint": "eslint . --ext ts --ext tsx --ext js",
+    "format": "prettier --write .",
+    "test-all": "npm run check-format & npm run check-lint && npm run check-types && npm run build"
   },
   "dependencies": {
     "@react-spring/three": "^9.4.5",
@@ -47,6 +44,7 @@
     "file-loader": "^6.2.0",
     "glslify": "^7.1.1",
     "glslify-loader": "^2.0.0",
+    "husky": "^8.0.0",
     "next-compose-plugins": "^2.2.1",
     "next-offline": "^5.0.5",
     "prettier": "^2.6.2",

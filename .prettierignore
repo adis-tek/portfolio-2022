@@ -1,0 +1,4 @@
+/node_modules
+/.next
+shader.frag
+shader.vert
