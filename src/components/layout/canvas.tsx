@@ -15,8 +15,12 @@ const CanvasWrapper = ({ children }) => {
         // @ts-ignore
         mode="concurrent"
         style={{
-          position: "absolute",
+          position: "fixed",
           top: 0,
+          left: 0,
+          width: 100 + "%",
+          height: 100 + "%",
+          zIndex: -1,
         }}
       >
         <Stats />

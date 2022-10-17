@@ -43,12 +43,13 @@ const ShaderExample = (props: ShaderProps) => {
   return (
     <mesh
       ref={meshRef}
-      scale={hovered ? 1.1 : 1}
+      // scale={hovered ? 1.1 : 1}
       onPointerOver={(e) => setHover(true)}
       onPointerOut={(e) => setHover(false)}
       {...props}
     >
-      <boxBufferGeometry args={[1, 1, 1]} />
+      {/* <boxBufferGeometry args={[1, 1, 1]} /> */}
+      <planeBufferGeometry args={[2, 2, 2]} />
       {/* @ts-ignore */}
       <colorShiftMaterial key={ColorShiftMaterial.key} time={3} />
     </mesh>
