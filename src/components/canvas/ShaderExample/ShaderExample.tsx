@@ -9,7 +9,7 @@ import fragment from "./shaders/shader.frag";
 const ColorShiftMaterial = shaderMaterial(
   {
     time: 0,
-    color: new THREE.Color(0.05, 0.2, 0.025),
+    // resolution: new THREE.Vector2(),
   },
   vertex,
   fragment
@@ -46,12 +46,13 @@ const ShaderExample = (props: ShaderProps) => {
       // scale={hovered ? 1.1 : 1}
       onPointerOver={(e) => setHover(true)}
       onPointerOut={(e) => setHover(false)}
+      position={[0, 0, 0]}
       {...props}
     >
       {/* <boxBufferGeometry args={[1, 1, 1]} /> */}
       <planeBufferGeometry args={[2, 2, 2]} />
       {/* @ts-ignore */}
-      <colorShiftMaterial key={ColorShiftMaterial.key} time={3} />
+      <colorShiftMaterial key={ColorShiftMaterial.key} time={0} />
     </mesh>
   );
 };
