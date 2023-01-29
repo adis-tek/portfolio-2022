@@ -11,7 +11,7 @@ const Dom = ({ children }) => {
     <div
       className="dom"
       style={{
-        position: "absolute",
+        position: "relative",
         top: 0,
         left: 0,
         zIndex: 10,
@@ -19,16 +19,6 @@ const Dom = ({ children }) => {
       }}
       ref={ref}
     >
-      {/* <div>
-        <h1>Testing</h1>
-        <p>Testing more.</p>
-        <h1>Testing</h1>
-        <p>Testing more.</p>
-        <h1>Testing</h1>
-        <p>Testing more.</p>
-        <h1>Testing</h1>
-        <p>Testing more.</p>
-      </div> */}
       {children}
     </div>
   );

@@ -16,7 +16,17 @@ const Shader = dynamic(
 
 // DOM elements here
 const DOM = () => {
-  return <></>;
+  return (
+    <div className="dom-container">
+      <div className="dom-content">
+        <h1> TESTING </h1>
+        <h1> TESTING </h1>
+        <h1> TESTING </h1>
+        <h1> TESTING </h1>
+        <h1> TESTING </h1>
+      </div>
+    </div>
+  );
 };
 
 // Canvas/R3F components here
